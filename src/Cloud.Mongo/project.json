@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0.0-*",
+
+  "dependencies": {
+    "Cloud.Core": "1.0.0.0-*",
+    "Abp.AutoMapper": "0.11.0.2",
+    "MongoDB.Driver": "2.2.4",
+    "Cloud.Strategy": "1.0.0.0-*",
+    "mongocsharpdriver": "2.2.4"
+  },
+
+  "frameworks": {
+    "net461": {
+    }
+  }
+}

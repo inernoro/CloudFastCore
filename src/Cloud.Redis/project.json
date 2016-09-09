@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0.0-*",
+
+  "dependencies": {
+    "Cloud.Core": "1.0.0.0-*",
+    "Abp.AutoMapper": "0.11.0.2",
+    "StackExchange.Redis": "1.1.603",
+    "Cloud.Strategy": "1.0.0.0-*"
+  },
+
+  "frameworks": {
+    "net461": {
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0.0-*",
+
+  "dependencies": {
+    "Abp": "0.11.0.2",
+    "Jil": "2.14.5",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0",
+    "NeoLua": "1.2.8",
+    "StackExchange.Redis": "1.1.603",
+    "System.Net.Http": "4.1.0"
+  },
+
+  "frameworks": {
+    "net461": {
+    }
+  },
+
+  "buildOptions": {
+    "embed": {
+      "include": [
+        "Localization/SourceFiles/*.json"
+      ]
+    }
+  }
+}

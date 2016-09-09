@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0.0-*",
+
+  "dependencies": {
+    "Abp": "0.11.0.2",
+    "Cloud.Core": "1.0.0.0-*",
+    "Cloud.Strategy": "1.0.0.0-*",
+    "Dapper": "1.50.2",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0"
+  },
+
+  "frameworks": {
+    "net461": {
+    }
+  },
+
+  "buildOptions": {
+    "embed": {
+      "include": [
+        "Localization/SourceFiles/*.json"
+      ]
+    }
+  }
+}

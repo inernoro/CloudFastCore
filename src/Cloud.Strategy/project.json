@@ -1,0 +1,13 @@
+﻿{
+  "version": "1.0.0.0-*",
+
+  "dependencies": {
+    "Cloud.Core": "1.0.0.0-*",
+    "Abp.AutoMapper": "0.11.0.2"
+  },
+
+  "frameworks": {
+    "net461": {
+    }
+  }
+}
