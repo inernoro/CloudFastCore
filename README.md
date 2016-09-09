@@ -1,3 +1,5 @@
+#该项目是cloudFastcore版本，暂时只支持window版本，已实现webapi核心功能，核心abp的依赖注入等，有很多坑，大家可以下载预览，或评估。
+
 # ASP.NET Core & EntityFramework Core Based Startup Template
 
 This template is a simple startup project to start with ABP
