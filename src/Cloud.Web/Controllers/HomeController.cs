@@ -6,7 +6,7 @@ namespace Cloud.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View("~/Areas/ApiManager/Views/Manager/List.cshtml");
         }
 
         public ActionResult About()

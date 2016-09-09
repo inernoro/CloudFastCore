@@ -10,7 +10,7 @@ namespace Cloud.Web.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("~/Areas/ApiManager/Views/Manager/List.cshtml");
         }
     }
 }
