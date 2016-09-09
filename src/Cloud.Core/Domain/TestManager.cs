@@ -49,7 +49,7 @@ namespace Cloud.Domain
         /// <summary>
         /// 返回结果集
         /// </summary>
-        public AjaxResponse<dynamic> Result { get; set; }
+        public AjaxResponse<object> Result { get; set; }
 
         /// <summary>
         /// 耗时
@@ -72,7 +72,7 @@ namespace Cloud.Domain
         public string Result { get; set; }
         public bool Success { get; set; }
 
-        public static implicit operator AjaxResponse(Cloud.AjaxResponse<object> v)
+        public static implicit operator AjaxResponse(AjaxResponse<object> v)
         {
             throw new NotImplementedException();
         }

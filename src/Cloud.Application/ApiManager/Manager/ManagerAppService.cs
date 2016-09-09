@@ -34,8 +34,8 @@ namespace Cloud.ApiManager.Manager
 
         public ManagerAppService(
             IManagerMongoRepositories managerMongoRepositories,
-            IManagerUrlStrategy managerUrlStrategy, 
-            IAbpSession abpSession, 
+            IManagerUrlStrategy managerUrlStrategy,
+            IAbpSession abpSession,
             IAssemblyStrategy domainService,
             IRedisHelper redisHelper,
             IEcmaScriptPacker iecmaScriptPacker
@@ -79,7 +79,18 @@ namespace Cloud.ApiManager.Manager
 
         private static ViewDataMongoModel _data;
 
-        private ViewDataMongoModel ViewDataMongoModel => _data ?? (_data = (Network.DoGet<ViewDataMongoModel>(_managerUrlStrategy.InitUrl)));
+        private ViewDataMongoModel ViewDataMongoModel
+        {
+            get
+            {
+                if (_data == null)
+                {
+                    dynamic re = JsonConvert.DeserializeObject(Network.DoGet(_managerUrlStrategy.InitUrl).Result);
+                    _data = JsonConvert.DeserializeObject<ViewDataMongoModel>(re.result.ToString());
+                }
+                return _data;
+            }
+        }
 
         public ViewDataMongoModel AllInterface()
         {
@@ -151,7 +162,7 @@ namespace Cloud.ApiManager.Manager
             watch.Stop();
             output.Take = watch.ElapsedMilliseconds;
             output.ErrorCode = "200";
-            AjaxResponse<dynamic> result = JsonConvert.DeserializeObject<AjaxResponse<dynamic>>(output.Result);
+            var result = JsonConvert.DeserializeObject<AjaxResponse<object>>(output.Result);
             back.Parament = dictionary;
             if (!result.Success)
             {

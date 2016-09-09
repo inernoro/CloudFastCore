@@ -22,10 +22,10 @@ namespace Cloud.Framework.Assembly
 
         static Network()
         {
-            var redis = IocManager.Instance.Resolve<IRedisHelper>();
-            var user = IocManager.Instance.Resolve<ICurrentUser>();
-            _loginFunc = () => new Login { UserName = user.UserName, Password = user.Password };
-            _getguidFunc = () => user.Token;
+            //var redis = IocManager.Instance.Resolve<IRedisHelper>();
+            //var user = IocManager.Instance.Resolve<ICurrentUser>();
+            //_loginFunc = () => new Login { UserName = user.UserName, Password = user.Password };
+            //_getguidFunc = () => user.Token;
         }
 
         #region Http请求
