@@ -112,6 +112,11 @@ namespace Cloud.Framework.Assembly
             }
         }
 
+        public static T DoGet<T>(string initUrl)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
     }
 

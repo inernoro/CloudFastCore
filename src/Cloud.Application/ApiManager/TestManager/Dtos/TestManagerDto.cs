@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using Abp.Domain.Entities;
+using Abp.AutoMapper;
 using Abp.Web.Models;
-using Cloud.Framework.Assembly;
-using Cloud.Framework.Mongo;
-using Newtonsoft.Json.Linq;
+using Cloud.ApiManager.Manager;
+using Cloud.Domain;
 
-namespace Cloud.Domain
+namespace Cloud.ApiManager.TestManager.Dtos
 {
-    public class TestManager
+    [AutoMap(typeof(Domain.TestManager))]
+    public class TestManagerDto
     {
-
         /// <summary>
         /// 参数列表
         /// </summary>
@@ -24,7 +23,7 @@ namespace Cloud.Domain
         /// <summary>
         /// 测试环境
         /// </summary>
-    //    public TestEnvironment TestEnvironment { set; get; }
+        public TestEnvironment TestEnvironment { set; get; }
 
         /// <summary>
         /// 数据类型
@@ -65,16 +64,5 @@ namespace Cloud.Domain
         /// 调用者
         /// </summary>
         public long? UserId { get; set; }
-    }
-
-    public class AjaxResponse
-    {
-        public string Result { get; set; }
-        public bool Success { get; set; }
-
-        public static implicit operator AjaxResponse(Cloud.AjaxResponse<object> v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

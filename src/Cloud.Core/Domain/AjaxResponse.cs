@@ -1,6 +1,6 @@
-﻿namespace Cloud.ApiManager.Manager
+﻿namespace Cloud
 {
-    internal class AjaxResponse<T>
+    public class AjaxResponse<T>
     {
         public object Result { get; set; }
         public bool Success { get; set; }
